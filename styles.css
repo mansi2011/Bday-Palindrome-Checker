@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+:root{
+    --primary-color: #831742;
+    --secondary-color: #ffffff;
+    --highlight-color: #FBBF24;
+    font-family: 'EB Garamond', serif;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p{
+    margin: 0;
+}
+
+h1,h2{
+    line-height: 1;
+}
+.highlight{
+    color: var(--highlight-color);
+}
+.bg-red{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
