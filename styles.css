@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 :root{
-    --primary-color: #831742;
+    --primary-color: #74193d;
     --secondary-color: #ffffff;
     --highlight-color: #FBBF24;
     font-family: 'EB Garamond', serif;
@@ -11,12 +11,17 @@
 *::after{
     box-sizing: border-box;
 }
+body{
+margin: 2.5rem;
 
-body,
+}
+
+
 h1,
 h2,
-p{
+p,button{
     margin: 0;
+    margin-bottom: 1rem;
 }
 
 h1,h2{
@@ -29,6 +34,104 @@ h1,h2{
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+.text-center{
+    text-align: center;
+}
+header{
+    padding: 6rem 0rem;
+    border-radius: 1rem;
+}
+section{
+    padding: 3rem 0rem;
+}
+
+.split{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.split .split-content button{
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border-style: none;
+    color: var(--primary-color);
+    font-weight: bolder;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media(min-width: 40em){
+    .split{
+        flex-direction: row;
+    }
+
+    .split > *{
+        flex-basis: 100%;
+    }
+
+    .split .split-content{
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+
+    /* .split .split-content button{
+        margin-inline-start: auto;
+    } */
+
+    section .container .input{
+        margin-left: 29rem;
+        cursor: pointer;
+    }
+
+    section .container .btn-check{
+       margin-left: 33rem;
+       cursor: pointer;
+    }
+
+}
+
+.container{
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+section .container p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+section .container .input{
+    
+    padding: .5rem 2rem;
+    border-radius: 2rem;
+    border-color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+section .container button{
+ 
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-style: none;
+    font-weight: bold;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    cursor: pointer;
+
+}
+
 
 
 

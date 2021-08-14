@@ -11,25 +11,29 @@
 </head>
 <body>
     <header class="bg-red">
-        <div class="split">
-            <div> 
-                <h1>Check out if your <span class="highlight">Birthdate</span> is <span class="highlight">Palidrome</span>.</h1>
-                <p1>A palindrome is a word/number which reads the same backward as forward</p1>.
-                <button>Let's Go</button>
-            </div>
-            <div>
-                <img src="./assets/hero.jpg" height="400" width="300" alt="calendar">
+        <div class="container">
+            <div class="split">
+                <div class="split-content">
+                    <h1>Check out if your <span class="highlight">Birthdate</span> is <span class="highlight">Palindrome</span>.</h1>
+                    <p>A palindrome is a word/number which reads the same backward as forward.</p>
+                    <a href="#palindrome-check"><button class="check">Let's Go</button></a>
+                </div>
+                <div>
+                    <img src="./assets/hero.jpg" height="400" width="300" alt="calendar">
+                </div>
             </div>
         </div>
-       
     </header>
-    <section>
-        <h2 class="text-center">Enter your birthdate and we will tell you if your birthdate is a palindrome</h2>
-        <p>This app checks your birthdate in given formats</p>
-        <input type="date">
-        <button>check</button>
+    <section id="palindrome-check">
+        <div class="container">
+            <h2 class="text-center">Enter your birthdate and we will tell you if your birthdate is a palindrome</h2>
+            <p>This app checks your birthdate in given formats</p>
+            <input class="input" type="date"><br>
+            <button class="btn-check" >check</button>
+            <div class="result"></div>
+        </div>
     </section>
     
-    
+ <script src="app.js"></script>   
 </body>
 </html>
