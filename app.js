@@ -16,7 +16,7 @@ function reverseStr(str){
     
 }
 
-console.log(reverseStr('hello'))
+
 function checkPalindrome(str){
    var reverse = reverseStr(str)
    if (reverse == str){
@@ -142,6 +142,14 @@ function nextPalindromeDate(dateObject){
 
 }
 
+let dateObject = {
+    day : 4,
+    month: 1,
+    year: 2020
+}
+
+console.log(nextPalindromeDate(dateObject))
+
 function clickHandler(e){
 
     let bdayDate = inputVal.value;
@@ -163,8 +171,8 @@ function clickHandler(e){
 
         else{
             let [count , nextDate] = nextPalindromeDate(dateObject);
-            outDiv.innerHTML = `<p>Oops! Birthday is not a palindrome.The next palindrome date is 
-            ${nextDate.day}-${nextDate.month}-${nextDate.year}.You missed by ${count} days. </p>`
+            outDiv.innerHTML = `<p> Oops! birthdate is not a palindrome.The next palindrome date is 
+            x </p>`
         }
     }
 
