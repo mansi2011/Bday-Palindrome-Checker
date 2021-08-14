@@ -131,24 +131,17 @@ function nextPalindromeDate(dateObject){
 
     while(1){
         count++;
-        let isPalindrome = isPalindromeForAllDateFormat(dateObject);
+        let isPalindrome = isPalindromeForAllDateFormat(nextDate);
         if(isPalindrome){
             break;
         }
-        nextDate = incrementDate(dateObject)
+        nextDate = incrementDate(nextDate)
     }
 
-    return [count , nextDate]
+    return [count , nextDate];
 
 }
 
-let dateObject = {
-    day : 4,
-    month: 1,
-    year: 2020
-}
-
-console.log(nextPalindromeDate(dateObject))
 
 function clickHandler(e){
 
@@ -166,13 +159,13 @@ function clickHandler(e){
         console.log(isPalindrome)
 
         if(isPalindrome){
-            outDiv.innerHTML = `<p>Yayy! your birthday is a palindrome.</p>`
+            outDiv.innerHTML = '<p>Yayy! your birthday is a palindrome 🤩.</p>'
         }
 
         else{
             let [count , nextDate] = nextPalindromeDate(dateObject);
             outDiv.innerHTML = `<p> Oops! birthdate is not a palindrome.The next palindrome date is 
-            x </p>`
+             ${nextDate.day}-${nextDate.month}-${nextDate.year}. You missed by ${count} days 🙁. </p>`
         }
     }
 
