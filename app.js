@@ -2,7 +2,7 @@ let goBtn = document.querySelector('.check');
 let inputVal = document.querySelector('.input');
 let btnCheck = document.querySelector('.btn-check');
 let outDiv = document.querySelector('.result');
-let section = document.querySelector('section');
+
 // let palindromeDiv = document.querySelector('.container')
 
 // let dateInput = inputVal.value;
@@ -142,20 +142,36 @@ function nextPalindromeDate(dateObject){
 
 }
 
-let dateObject = {
-    day : 31,
-    month : 12,
-    year : 2020
+function clickHandler(e){
+
+    let bdayDate = inputVal.value;
+
+    if(bdayDate !==''){
+        let dateList = bdayDate.split('-')
+        let dateObject = {
+            day : Number(dateList[2]),
+            month: Number(dateList[1]),
+            year: Number(dateList[0])
+        }
+
+        let isPalindrome = isPalindromeForAllDateFormat(dateObject);
+        console.log(isPalindrome)
+
+        if(isPalindrome){
+            outDiv.innerHTML = `<p>Yayy! your birthday is a palindrome.</p>`
+        }
+
+        else{
+            let [count , nextDate] = nextPalindromeDate(dateObject);
+            outDiv.innerHTML = `<p>Oops! Birthday is not a palindrome.The next palindrome date is 
+            ${nextDate.day}-${nextDate.month}-${nextDate.year}.You missed by ${count} days. </p>`
+        }
+    }
 
 }
 
-console.log(checkPalindrome('racecare'))
-console.log(convertDateToStr(dateObject))
-console.log(getAllDateFormat(dateObject))
-console.log(isPalindromeForAllDateFormat(dateObject))
-console.log(leapYear(2020))
-console.log(incrementDate(dateObject))
-console.log(nextPalindromeDate(dateObject))
+btnCheck.addEventListener('click',clickHandler)
+
 
 
 
